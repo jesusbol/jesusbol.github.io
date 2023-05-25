@@ -1,0 +1,175 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+  }
+  
+  .title {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .logo {
+    width: 100px; 
+    margin-left: 10px; 
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0dbe9;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #000000;
+  }
+  
+  table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  table, th, td {
+    border: 1px solid #000000;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .subtotal {
+    text-align: right;
+  }
+  
+  .total {
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+    background-color: #7392b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: left 0.3s ease;
+    z-index: 1;
+  }
+  
+  .button:hover:before {
+    left: 0;
+  }
+  
+  .button span {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Estilos adicionales para el botón "Calcular" */
+  .calculate-button {
+    background-color: #27AE60;
+  }
+  
+  .calculate-button:before {
+    background-color: rgba(39, 174, 96, 0.3);
+  }
+  
+  .calculate-button:hover:before {
+    left: 100%;
+  }
+  
+  .save-button {
+    background-color: #EB5757;
+  }
+  
+  .save-button:before {
+    background-color: rgba(235, 87, 87, 0.3);
+  }
+  
+  .save-button:hover:before {
+    left: 100%;
+  }
+  
+  /* Estilos responsivos para dispositivos móviles */
+  @media (max-width: 768px) {
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .button {
+      margin: 10px 0;
+    }
+  }
+  
+  table tr th,
+table tr td {
+  position: relative;
+  padding-left: 40px;
+}
+
+table tr th:before,
+table tr td:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 80%;
+  background-color: #CCCCCC;
+}
+
+  .new-accounting {
+    display: block;
+    margin: 0  auto;
+    text-align: center;
+    background-color: #2F80ED;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 0px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .new-accounting:hover {
+    background-color: #142455;
+  }
+  .button:hover {
+    background-color: #142455;}
+
+  
+  

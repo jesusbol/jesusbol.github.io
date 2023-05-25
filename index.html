@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Soluciones estratégicas</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+  <div class="header">
+    <h1 class="title">Soluciones Estratégicas</h1>
+    <img src="Logo.png" alt="Logo de la empresa" class="logo">
+  </div>      
+
+  <form id="quotation-form" method="post" action="index.php">
+    <table>
+      <tr>
+        <th>Nombre del Cliente</th>
+        <th>Fecha</th>
+        <th>Teléfono</th>
+        <th>Torre</th>
+        <th>Apartamento</th>
+        <th>Tipo de contratación</th>
+      </tr>
+      <tr>
+        <td><input type="text" name="client_name"></td>
+        <td><input type="text" name="date"></td>
+        <td><input type="text" name="phone"></td>
+        <td><input type="text" name="tower"></td>
+        <td><input type="text" name="apartment"></td>
+        <td><input type="text" name="contract_type"></td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <th>Descripción</th>
+        <th>Valor Unitario</th>
+      </tr>
+      <tr>
+        <td>Piso y enchape (nivelación de piso)</td>
+        <td><input type="text" id="floor_leveling" name="floor_leveling"></td>
+      </tr>
+      <tr>
+        <td>Piso y enchape (enchape cerámico)</td>
+        <td><input type="text" id="ceramic_tiles" name="ceramic_tiles"></td>
+      </tr>
+      <tr>
+        <td>Mampostería (resane sobre muro y placa)</td>
+        <td><input type="text" id="masonry" name="masonry"></td>
+      </tr>
+      <tr>
+        <td>Estuco y pintura (resane sobre muro y placa)</td>
+        <td><input type="text" id="plastering" name="plastering"></td>
+      </tr>
+      <tr>
+        <td>Estuco y pintura (pintura 3 manos blanca)</td>
+        <td><input type="text" id="painting" name="painting"></td>
+      </tr>
+      <tr>
+        <td>Acometida eléctrica (papeles les)</td>
+        <td><input type="text" id="electrical_work" name="electrical_work"></td>
+      </tr>
+      <tr>
+        <td>Cielo razo (cielo razo drywall)</td>
+        <td><input type="text" id="drywall" name="drywall"></td>
+      </tr>
+      <tr>
+        <td>Vidrios y espejos (divisiones en vidrio templado)</td>
+        <td><input type="text" id="glass_divisions" name="glass_divisions"></td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <td class="subtotal">Subtotal:</td>
+        <td><input type="text" name="subtotal" id="subtotal" readonly></td>
+      </tr>
+      <tr>
+        <td>IVA:</td>
+        <td><input type="text" name="iva" id="iva" readonly></td>
+      </tr>
+      <tr>
+        <td class="total">Total:</td>
+        <td><input type="text" name="total" id="total" readonly></td>
+      </tr>
+    </table>
+
+    <div class="button-container">
+      <button type="button" class="button calculate-button" onclick="calculateTotal()"><span>Calcular</span></button>
+      <button type="button" class="button save-button" onclick="downloadAsPDF()"><span>Guardar</span></button>
+    </div>      
+  </form>
+
+  <button onclick="createNewAccounting()" class="new-accounting">Crear Nueva Contabilidad</button>
+  
+  <script src="codigo.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+function downloadAsPDF() {
+    // Obtener los datos del formulario
+    var clientName = document.getElementById('quotation-form').elements['client_name'].value;
+    var date = document.getElementById('quotation-form').elements['date'].value;
+    var phone = document.getElementById('quotation-form').elements['phone'].value;
+    var tower = document.getElementById('quotation-form').elements['tower'].value;
+    var apartment = document.getElementById('quotation-form').elements['apartment'].value;
+    var contractType = document.getElementById('quotation-form').elements['contract_type'].value;
+    var subtotal = document.getElementById('quotation-form').elements['subtotal'].value;
+    var iva = document.getElementById('quotation-form').elements['iva'].value;
+    var total = document.getElementById('quotation-form').elements['total'].value;
+  
+    // Crear el documento PDF
+    var doc = new jsPDF();
+  
+    // Agregar el contenido al PDF
+    doc.text(`Nombre del cliente: ${clientName}`, 10, 10);
+    doc.text(`Fecha: ${date}`, 10, 20);
+    doc.text(`Teléfono: ${phone}`, 10, 30);
+    doc.text(`Torre: ${tower}`, 10, 40);
+    doc.text(`Apartamento: ${apartment}`, 10, 50);
+    doc.text(`Tipo de contratación: ${contractType}`, 10, 60);
+    doc.text(`Subtotal: ${subtotal}`, 10, 70);
+    doc.text(`IVA: ${iva}`, 10, 80);
+    doc.text(`Total: ${total}`, 10, 90);
+  
+    // Guardar el PDF
+    doc.save('cotizacion.pdf');
+  
+    alert('Cotización guardada y descargada correctamente');
+  }
+  
